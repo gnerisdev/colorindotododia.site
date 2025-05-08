@@ -21,6 +21,7 @@ section {
   text-transform: uppercase;
   width: fit-content;
   display: flex;
+  margin: auto;
 }
 @media (max-width: 767px) {
   .button {
@@ -232,6 +233,137 @@ section {
   }
 }
 
+/* Section Offers */
+.section-offers__cards {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.card {
+  background: linear-gradient(to bottom right, #f7f7f7, #ffffff);
+  border-radius: 20px;
+  padding: 32px;
+  margin: 32px 0 12px;
+  max-width: 400px;
+  height: fit-content;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  font-family: Arial, sans-serif;
+  color: #000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card::before,
+.card::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.card::before {
+  width: 100px;
+  height: 100px;
+  background: #ffce00;
+  top: 20%;
+  left: -30px;
+}
+
+.card::after {
+  width: 80px;
+  height: 80px;
+  background: #ff6b6b;
+  bottom: -20px;
+  right: -20px;
+}
+
+.card__decorate {
+  position: absolute;
+  opacity: 0.3;
+  width: 100px;
+  top: -16px;
+  height: 100px;
+  right: -40px;
+}
+
+.card__wrapper-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  font-family: "ADLaM Display", Sans-serif;
+  background: #b3ddff;
+  padding: 0.3rem 1rem;
+  width: fit-content;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto 16px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .card__wrapper-title {
+    font-size: 1.7rem;
+  }
+}
+
+.card ul {
+  padding: 0;
+  margin-bottom: 1.5rem;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: circle;
+}
+
+.card ul li {
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.card img {
+  width: 100%;
+}
+
+.preco-antigo {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  z-index: 1;
+  position: relative;
+}
+
+.preco-antigo span {
+  text-decoration: line-through;
+  margin-right: 0.4rem;
+}
+
+.preco-atual {
+  background: #fff;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.2rem;
+  color: #006400;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  z-index: 1;
+  position: relative;
+}
+
+.moeda {
+  font-size: 1rem;
+  vertical-align: super;
+}
 
 /* Footer */
 .footer {
